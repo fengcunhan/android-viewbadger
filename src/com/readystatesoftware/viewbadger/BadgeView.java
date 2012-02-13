@@ -182,7 +182,6 @@ public class BadgeView extends TextView {
 	public void show() {
 		show(false, null);
 	}
-	
 	/**
      * Make the badge visible in the UI.
      *
@@ -268,6 +267,7 @@ public class BadgeView extends TextView {
 		}
 		this.setVisibility(View.VISIBLE);
 		isShown = true;
+		
 	}
 	
 	private void hide(boolean animate, Animation anim) {
@@ -320,7 +320,6 @@ public class BadgeView extends TextView {
 	}
 	
 	private ShapeDrawable getDefaultBackground() {
-		
 		int r = dipToPixels(DEFAULT_CORNER_RADIUS_DIP);
 		float[] outerR = new float[] {r, r, r, r, r, r, r, r};
         
@@ -455,6 +454,7 @@ public class BadgeView extends TextView {
 	public void setBadgeBackgroundColor(int badgeColor) {
 		this.badgeColor = badgeColor;
 		badgeBg = getDefaultBackground();
+		setBackgroundDrawable(badgeBg);
 	}
 	
 	private int dipToPixels(int dip) {
